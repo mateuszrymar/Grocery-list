@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div id="card" class="card">
+                    <div class="card-content">
+                        <h4>Grocery List</h4>
+                        <div class="row">
+                            <form id="grocery-item-form">
+                                <h5 id="grocery-mode-title" style="margin: 10px 0;" class="col s12">Add Grocery Item</h5>
+                                <div class="input-field col s12">
+                                    <input type="text" name="grocery-item-name" id="grocery-item-name">
+                                    <label for="grocery-item-name">Name</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input type="text" name="grocery-item-description" id="grocery-item-description">
+                                    <label for="grocery-item-description">Description</label>
+                                </div>
+                                <div class="col s12">
+                                    <input id="add-item-btn" type="submit" value="Add Item" class="btn">
+                                    <input id="edit-btn" type="button" value="Edit Item" class="btn light-blue darken-4" style="visibility: hidden;">
+                                    <input id="cancel-btn" type="button" value="Cancel" class="btn red darken-3" style="visibility: hidden;">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <div class="row">
+                            <div class="col s12">
+                                <h5 id="grocery-title">Grocery Items</h5>
+                                <div class="input-field">
+                                    <input type="text" name="filter" id="filter">
+                                    <label for="filter">Filter Items by Name</label>
+                                </div>
+                                <ul class="item-list collection">
+                                    <!-- Here we insert the item list. -->
+                                </ul>
+                                <a href="" id="clear-list-btn" class="clear-list btn black">Clear List</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
